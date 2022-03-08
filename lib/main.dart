@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     bringVegetables(bag: true);
     return MaterialApp(
       themeMode: ThemeMode.light,
+      debugShowCheckedModeBanner: true,
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           textTheme: GoogleFonts.latoTextTheme()),
