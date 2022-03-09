@@ -6,7 +6,7 @@ class AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl = "https://avatars.githubusercontent.com/u/44436797?v=4";
+    const imageUrl = "https://avatars.githubusercontent.com/u/44436797?v=4";
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
