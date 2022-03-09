@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic_app/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   String sdkName = "Flutter";
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
           child: Text("Welcome to $sdkName $appType App"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: AppDrawer(),
     );
   }
 }

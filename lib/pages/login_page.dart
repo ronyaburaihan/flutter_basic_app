@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: AnimatedContainer(
                             duration: Duration(seconds: 1),
                             height: 45,
-                            width: changeButton ? 45 : 150,
+                            width: changeButton ? 45 : 200,
                             alignment: Alignment.center,
                             child: changeButton
                                 ? Icon(
@@ -83,6 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                                 : Text(
                                     "Login",
                                     style: TextStyle(
+                                      fontSize: 18,
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold),
                                   ),
