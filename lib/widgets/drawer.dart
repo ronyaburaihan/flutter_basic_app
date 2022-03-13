@@ -26,13 +26,20 @@ class AppDrawer extends StatelessWidget {
                 textScaleFactor: 1.2, style: TextStyle(color: Colors.black87)),
           ),
           ListTile(
-            leading: Icon(CupertinoIcons.profile_circled, color: Colors.black87),
+            leading:
+                Icon(CupertinoIcons.profile_circled, color: Colors.black87),
             title: Text("Profile",
                 textScaleFactor: 1.2, style: TextStyle(color: Colors.black87)),
           ),
           ListTile(
             leading: Icon(CupertinoIcons.mail, color: Colors.black87),
             title: Text("Contact",
+                textScaleFactor: 1.2, style: TextStyle(color: Colors.black87)),
+          ),
+          ListTile(
+            leading:
+                Icon(CupertinoIcons.arrow_left_square, color: Colors.black87),
+            title: Text("Log Out",
                 textScaleFactor: 1.2, style: TextStyle(color: Colors.black87)),
           )
         ],

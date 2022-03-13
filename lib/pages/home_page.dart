@@ -1,11 +1,23 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_basic_app/models/product.dart';
 import 'package:flutter_basic_app/widgets/drawer.dart';
 import 'package:flutter_basic_app/widgets/product_item_widget.dart';
 
-class HomePage extends StatelessWidget {
-  String sdkName = "Flutter";
-  String appType = "Basic";
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+
+    loadData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,5 +34,13 @@ class HomePage extends StatelessWidget {
       ),
       drawer: AppDrawer(),
     );
+  }
+
+  void loadData() async {
+    final productString =
+        await rootBundle.loadString("assets/files/products.json");
+    final decodeData = jsonDecode(productString);
+    var productData = decodeData["products"];
+    print(productData);
   }
 }
